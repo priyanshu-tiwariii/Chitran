@@ -1,7 +1,8 @@
 import { Router } from "express";
 
-import { healthCheckController } from "../controllers/health.controllers.ts";
+import { databaseHealthCheckController, serverHealthCheckController } from "../controllers/health.controllers.ts";
 
 const healthCheckRouter:Router = Router();
-healthCheckRouter.get("/health",healthCheckController);
+healthCheckRouter.get("/health/server",serverHealthCheckController);
+healthCheckRouter.get("/health/database",databaseHealthCheckController);
 export default healthCheckRouter;
