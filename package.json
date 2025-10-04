@@ -4,13 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:server": "npm run start --workspace=server",
-    "dev:web": "npm run dev --workspace=web"
+     "dev:server": "pnpm --filter server dev",
+  "dev:web": "pnpm --filter web dev"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "workspaces": [
-    "packages/*"
-  ]
+  "license": "ISC"
 }
